@@ -1,11 +1,11 @@
-import paramiko
-from scp import SCPClient
-from pathlib import Path
 import os
-from dotenv import load_dotenv
+from pathlib import Path
 
-env_path = Path(__file__).resolve().parent.parent.parent / ".env"
-load_dotenv(dotenv_path=env_path, override=True)
+from scp import SCPClient
+from src.dima123493.utils.env_loader import load_env_vars
+from src.dima123493.utils.ssh_utils import ssh_connection
+
+load_env_vars()
 
 hostname = os.getenv("HOSTNAME")
 username = os.getenv("USERNAME")
@@ -13,16 +13,12 @@ password = os.getenv("PASSWORD")
 
 base_dir = Path(__file__).resolve().parents[2]
 remote_path = "/root/test.log"
-
 local_path = base_dir / "downloaded" / "test.log"
 
 local_path.parent.mkdir(parents=True, exist_ok=True)
 
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(hostname, username=username, password=password)
+with ssh_connection(hostname, username, password) as ssh:
+    with SCPClient(ssh.get_transport()) as scp:
+        scp.get(remote_path, str(local_path))
 
-with SCPClient(ssh.get_transport()) as scp:
-    scp.get(remote_path, str(local_path))
-
-print("✅ File is copied file_copy Windows machine!")
+print("✅ File is copied from CentOS to Windows machine via SCP!")

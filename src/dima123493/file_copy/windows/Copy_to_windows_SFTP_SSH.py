@@ -1,10 +1,10 @@
-import paramiko
-from pathlib import Path
 import os
-from dotenv import load_dotenv
+from pathlib import Path
 
-env_path = Path(__file__).resolve().parent.parent.parent / ".env"
-load_dotenv(dotenv_path=env_path, override=True)
+from src.dima123493.utils.env_loader import load_env_vars
+from src.dima123493.utils.ssh_utils import ssh_connection
+
+load_env_vars()
 
 hostname = os.getenv("HOSTNAME")
 username = os.getenv("USERNAME")
@@ -12,18 +12,12 @@ password = os.getenv("PASSWORD")
 
 base_dir = Path(__file__).resolve().parents[2]
 remote_path = "/root/test.log"
-
 local_path = base_dir / "downloaded" / "test.log"
 
 local_path.parent.mkdir(parents=True, exist_ok=True)
 
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(hostname, username=username, password=password)
-
-sftp = ssh.open_sftp()
-sftp.get(remote_path, str(local_path))
-sftp.close()
-ssh.close()
+with ssh_connection(hostname, username, password) as ssh:
+    with ssh.open_sftp() as sftp:
+        sftp.get(remote_path, str(local_path))
 
 print("✅ File downloaded from CentOS via SFTP!")

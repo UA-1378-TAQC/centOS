@@ -44,9 +44,9 @@ The scripts within this repository leverage a range of technologies to achieve t
 
 ## ✅ Requirements
 
-- 🐍 **Python 3.10+** — основна мова для скриптів  
-- 🖥️ **CentOS VM / Server** — цільове середовище для запуску  
-- 🛠️ **Git** — для клонування репозиторію  
+- 🐍 **Python 3.10+** — the main language for scripts  
+- 🖥️ **CentOS VM / Server** — the target environment for execution  
+- 🛠️ **Git** — for cloning the repository   
 
 ## 🚀 Getting Started (For Students)
 

@@ -27,6 +27,7 @@ def transfer_file_to_remote():
 
             with SCPClient(ssh.get_transport()) as scp:
                 scp.put(local_file, remote_file)
+                print("File copied successfully!")
 
     except paramiko.AuthenticationException:
         raise Exception("Authentication failed: check username/password")

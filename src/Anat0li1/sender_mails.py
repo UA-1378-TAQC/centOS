@@ -12,14 +12,19 @@ EMAIL_TO = os.getenv("TARGET_MAIL")
 
 subject = "Test from Windows"
 body = f"This is a test email sent from Windows via Postfix on CentOS. (to {EMAIL_TO})"
-message = f"""\
-Subject: {subject}
-To: {EMAIL_TO}
-From: {EMAIL_FROM}
 
-{body}
-"""
+def send_email(server, port, sender, recipient, subject, body):
+    message = f"""\
+        Subject: {subject}
+        To: {EMAIL_TO}
+        From: {EMAIL_FROM}
 
-with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-    server.sendmail(EMAIL_FROM, [EMAIL_TO], message)
-    print("✅ На цей раз повезло")
+        {body}
+        """
+    with smtplib.SMTP(server, port) as smtp:
+        smtp.sendmail(sender, recipient, message)
+        print("✅ На цей раз повезло")
+
+
+if __name__ == "__main__":
+    send_email(SMTP_SERVER, SMTP_PORT, EMAIL_FROM, EMAIL_TO, subject, body)

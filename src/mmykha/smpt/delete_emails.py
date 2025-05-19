@@ -22,3 +22,4 @@ if __name__ == "__main__":
         delete_emails(USERNAME,SERVER,IMAP_PORT,MAILBOX,PASSWORD)
     except Exception as e:
         print(e)
+        

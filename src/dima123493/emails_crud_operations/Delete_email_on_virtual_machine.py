@@ -2,8 +2,9 @@ import os
 from src.dima123493.utils.env_loader import load_env_vars
 from src.dima123493.utils.ssh_utils import ssh_connection
 
+load_env_vars()
+
 def clear_centos_mails():
-    load_env_vars()
     hostname = os.getenv("HOSTNAME")
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")

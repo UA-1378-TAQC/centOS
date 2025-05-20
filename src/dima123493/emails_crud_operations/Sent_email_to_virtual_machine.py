@@ -4,8 +4,9 @@ from email.mime.text import MIMEText
 
 from src.dima123493.utils.env_loader import load_env_vars
 
+load_env_vars()
+
 def send_test_email():
-    load_env_vars()
     smtp_server = os.getenv("HOSTNAME")
     port = int(os.getenv("PORT"))
     sender = os.getenv("SENDER")

@@ -5,9 +5,9 @@ from scp import SCPClient
 from src.dima123493.utils.env_loader import load_env_vars
 from src.dima123493.utils.ssh_utils import ssh_connection
 
-def copy_log_from_centos_scp():
-    load_env_vars()
+load_env_vars()
 
+def copy_log_from_centos_scp():
     hostname = os.getenv("HOSTNAME")
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")

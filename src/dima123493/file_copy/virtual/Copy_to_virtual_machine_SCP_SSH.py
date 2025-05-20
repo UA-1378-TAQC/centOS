@@ -21,7 +21,7 @@ def copy_log_to_centos():
         with SCPClient(ssh.get_transport()) as scp:
             scp.put(str(local_path), remote_path)
 
-    print("✅ File is copied to CentOS via SCP!")
+    print("File is copied to CentOS via SCP!")
 
 if __name__ == "__main__":
     copy_log_to_centos()

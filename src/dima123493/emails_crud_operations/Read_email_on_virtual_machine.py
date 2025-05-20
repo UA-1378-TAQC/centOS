@@ -14,7 +14,7 @@ def read_centos_mails():
         stdin, stdout, stderr = ssh.exec_command(f"cat {mail_file}")
         mail_content = stdout.read().decode()
 
-        print("📬 CentOS email box content:")
+        print("CentOS email box content:")
         print(mail_content)
 
 if __name__ == "__main__":

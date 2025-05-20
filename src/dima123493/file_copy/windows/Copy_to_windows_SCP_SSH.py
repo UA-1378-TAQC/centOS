@@ -22,7 +22,7 @@ def copy_log_from_centos_scp():
         with SCPClient(ssh.get_transport()) as scp:
             scp.get(remote_path, str(local_path))
 
-    print("✅ File is copied from CentOS to Windows machine via SCP!")
+    print("File is copied from CentOS to Windows machine via SCP!")
 
 if __name__ == "__main__":
     copy_log_from_centos_scp()

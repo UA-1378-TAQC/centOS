@@ -22,7 +22,7 @@ def copy_log_to_centos_sftp():
         with ssh.open_sftp() as sftp:
             sftp.put(str(local_path), remote_path)
 
-    print("✅ File is copied to CentOS via SFTP!")
+    print("File is copied to CentOS via SFTP!")
 
 if __name__ == "__main__":
     copy_log_to_centos_sftp()

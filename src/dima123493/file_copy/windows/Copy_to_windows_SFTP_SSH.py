@@ -21,7 +21,7 @@ def download_log_from_centos_sftp():
         with ssh.open_sftp() as sftp:
             sftp.get(remote_path, str(local_path))
 
-    print("✅ File downloaded from CentOS via SFTP!")
+    print("File downloaded from CentOS via SFTP!")
 
 if __name__ == "__main__":
     download_log_from_centos_sftp()

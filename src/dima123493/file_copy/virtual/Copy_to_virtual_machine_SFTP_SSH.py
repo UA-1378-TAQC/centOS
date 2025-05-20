@@ -4,9 +4,9 @@ from pathlib import Path
 from src.dima123493.utils.env_loader import load_env_vars
 from src.dima123493.utils.ssh_utils import ssh_connection
 
-def copy_log_to_centos_sftp():
-    load_env_vars()
+load_env_vars()
 
+def copy_log_to_centos_sftp():
     hostname = os.getenv("HOSTNAME")
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")
@@ -22,7 +22,7 @@ def copy_log_to_centos_sftp():
         with ssh.open_sftp() as sftp:
             sftp.put(str(local_path), remote_path)
 
-    print("✅ File is copied to CentOS via SFTP!")
+    print("File is copied to CentOS via SFTP!")
 
 if __name__ == "__main__":
     copy_log_to_centos_sftp()

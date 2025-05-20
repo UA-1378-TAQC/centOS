@@ -4,9 +4,9 @@ from scp import SCPClient
 from src.dima123493.utils.env_loader import load_env_vars
 from src.dima123493.utils.ssh_utils import ssh_connection
 
-def copy_log_to_centos():
-    load_env_vars()
+load_env_vars()
 
+def copy_log_to_centos():
     hostname = os.getenv("HOSTNAME")
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")
@@ -21,7 +21,7 @@ def copy_log_to_centos():
         with SCPClient(ssh.get_transport()) as scp:
             scp.put(str(local_path), remote_path)
 
-    print("✅ File is copied to CentOS via SCP!")
+    print("File is copied to CentOS via SCP!")
 
 if __name__ == "__main__":
     copy_log_to_centos()

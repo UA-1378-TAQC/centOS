@@ -4,9 +4,9 @@ from pathlib import Path
 from src.dima123493.utils.env_loader import load_env_vars
 from src.dima123493.utils.ssh_utils import ssh_connection
 
-def download_log_from_centos_sftp():
-    load_env_vars()
+load_env_vars()
 
+def download_log_from_centos_sftp():
     hostname = os.getenv("HOSTNAME")
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")
@@ -21,7 +21,7 @@ def download_log_from_centos_sftp():
         with ssh.open_sftp() as sftp:
             sftp.get(remote_path, str(local_path))
 
-    print("✅ File downloaded from CentOS via SFTP!")
+    print("File downloaded from CentOS via SFTP!")
 
 if __name__ == "__main__":
     download_log_from_centos_sftp()

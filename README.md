@@ -165,7 +165,7 @@ pip install -r requirements.txt
 
 If win-init-pton==1.1.0 triggered error, then:
 ```cmd
-cd offline_packages
+cd legacy\offline_packages
 ```
 and
 ```cmd

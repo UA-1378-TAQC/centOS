@@ -1,8 +1,9 @@
 import logging
 import os
+import sys
 from datetime import datetime
 
-from config.config import LOG_DIR, LOG_FILE_FORMAT, LOG_LEVEL
+from config import LOG_DIR, LOG_FILE_FORMAT, LOG_LEVEL
 
 def setup_logger(test_name="default_test"):
     """

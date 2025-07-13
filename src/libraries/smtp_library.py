@@ -1,9 +1,10 @@
+import os
 import smtplib
+import sys
 
-from robot.api.deco import keyword
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config.logger_config import setup_logger
 
-@keyword
 def connect_server(host, port=25):
     logger = setup_logger('ConnectionAttempt')
     try:
@@ -14,6 +15,5 @@ def connect_server(host, port=25):
     except smtplib.SMTPServerDisconnected:
         logger.warn("Cannot connect to host %s. Verify the host is available." % host)
 
-@keyword
-def make_quit(smtp_svr=smtplib.SMTP()):
+def make_quit(smtp_svr):
     return smtp_svr.quit()

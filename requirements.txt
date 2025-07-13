@@ -25,4 +25,4 @@ six==1.17.0
 typing==3.10.0.0
 # win-init-pton==1.1.0
 wrapt==1.15.0
-robotframework-sshlibrary==3.4.0
+robotframework-sshlibrary==3.8.0

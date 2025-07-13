@@ -1,7 +1,6 @@
 *** Settings ***
-Library    SSHLibrary
-Library    Process
-Library    OperatingSystem
+Library     SSHLibrary
+
 Resource    ../resources/get_env.robot
 
 *** Keywords ***

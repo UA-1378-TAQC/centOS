@@ -13,7 +13,7 @@ Load Environment Variables
     ${TCP_TIMEOUT}=    Get Environment Variable    TCP_TIMEOUT
     ${SENDER}=    Get Environment Variable    LOCAL_SENDER
     ${RECIPIENT}=    Get Environment Variable    REMOTE_RECIPIENT
-
+    ${EMAIL_DIR}=    Get Environment Variable    EMAIL_DIR
 
     Log    Loaded host: ${HOST}
     Log    Port: ${PORT_INT}
@@ -25,3 +25,4 @@ Load Environment Variables
     Set Suite Variable    ${PASS}
     Set Suite Variable    ${SENDER}
     Set Suite Variable    ${RECIPIENT}
+    Set Suite Variable    ${EMAIL_DIR}

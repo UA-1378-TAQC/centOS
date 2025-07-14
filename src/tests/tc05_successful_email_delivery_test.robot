@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    src/resources/get_env.robot
-Resource    src/resources/resource.robot
+Resource    ../resources/get_env.robot
+Resource    ../resources/resource.robot
 
 Test Setup      Open Connection To SMTP
 Test Teardown   Close Connection

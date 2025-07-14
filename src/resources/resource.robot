@@ -39,12 +39,14 @@ Check Recipient Mailbox
     ...    SSHLibrary.Execute Command    test -s /var/spool/mail/${username}
     [Return]    ${result}
 
-
 Verify Email Content
     [Arguments]    ${recipient}    ${expected_subject}    ${expected_body}
-
     ${username}=    Evaluate    "${recipient}".split("@")[0]
-    ${mail_content}=    SSHLibrary.Execute Command    cat /var/spool/mail/${username}
+    
+    ${mail_files}=    SSHLibrary.Execute Command    ls -t ${EMAIL_DIR}
+    ${mail_filename}=    Evaluate    """${mail_files}.splitlines()[0]"""
+    ${mail_content}=    SSHLibrary.Execute Command    cat ${EMAIL_DIR}/${mail_filename}
+    
     ${subject_found}=    Run Keyword And Return Status
     ...    Should Contain    ${mail_content}    Subject: ${expected_subject}
     ${body_found}=    Run Keyword And Return Status

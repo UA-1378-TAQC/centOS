@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20250713 23:31:16.923" generator="Robot 3.1.2 (Python 2.7.18 on win32)">
+<robot rpa="false" generated="20250714 14:09:50.396" generator="Robot 3.1.2 (Python 2.7.18 on win32)">
 <suite source="D:\LFJ\TEST AUTOMATION INTERNSHIP\CentOS\centOS\src\tests\example_test.robot" id="s1" name="Example Test">
 <test id="s1-t1" name="Quit From Server">
 <kw name="Load Environment Variables" library="get_env">
 <kw name="Load Envs" library="load_env">
-<status status="PASS" endtime="20250713 23:31:17.002" starttime="20250713 23:31:17.000"></status>
+<status status="PASS" endtime="20250714 14:09:50.476" starttime="20250714 14:09:50.474"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -14,8 +14,8 @@
 <assign>
 <var>${HOST}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.002" level="INFO">${HOST} = 192.168.229.132</msg>
-<status status="PASS" endtime="20250713 23:31:17.002" starttime="20250713 23:31:17.002"></status>
+<msg timestamp="20250714 14:09:50.477" level="INFO">${HOST} = 192.168.229.132</msg>
+<status status="PASS" endtime="20250714 14:09:50.477" starttime="20250714 14:09:50.476"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -25,8 +25,8 @@
 <assign>
 <var>${PORT}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.003" level="INFO">${PORT} = 25</msg>
-<status status="PASS" endtime="20250713 23:31:17.003" starttime="20250713 23:31:17.003"></status>
+<msg timestamp="20250714 14:09:50.477" level="INFO">${PORT} = 25</msg>
+<status status="PASS" endtime="20250714 14:09:50.477" starttime="20250714 14:09:50.477"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -36,8 +36,8 @@
 <assign>
 <var>${PORT_INT}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.003" level="INFO">${PORT_INT} = 25</msg>
-<status status="PASS" endtime="20250713 23:31:17.003" starttime="20250713 23:31:17.003"></status>
+<msg timestamp="20250714 14:09:50.477" level="INFO">${PORT_INT} = 25</msg>
+<status status="PASS" endtime="20250714 14:09:50.477" starttime="20250714 14:09:50.477"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -47,8 +47,8 @@
 <assign>
 <var>${USER}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.003" level="INFO">${USER} = dms</msg>
-<status status="PASS" endtime="20250713 23:31:17.003" starttime="20250713 23:31:17.003"></status>
+<msg timestamp="20250714 14:09:50.477" level="INFO">${USER} = dms</msg>
+<status status="PASS" endtime="20250714 14:09:50.477" starttime="20250714 14:09:50.477"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -58,8 +58,8 @@
 <assign>
 <var>${PASS}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.004" level="INFO">${PASS} = root</msg>
-<status status="PASS" endtime="20250713 23:31:17.004" starttime="20250713 23:31:17.003"></status>
+<msg timestamp="20250714 14:09:50.477" level="INFO">${PASS} = root</msg>
+<status status="PASS" endtime="20250714 14:09:50.477" starttime="20250714 14:09:50.477"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -69,8 +69,8 @@
 <assign>
 <var>${TCP_TIMEOUT}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.004" level="INFO">${TCP_TIMEOUT} = 5</msg>
-<status status="PASS" endtime="20250713 23:31:17.004" starttime="20250713 23:31:17.004"></status>
+<msg timestamp="20250714 14:09:50.478" level="INFO">${TCP_TIMEOUT} = 5</msg>
+<status status="PASS" endtime="20250714 14:09:50.478" starttime="20250714 14:09:50.477"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -80,8 +80,8 @@
 <assign>
 <var>${SENDER}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.004" level="INFO">${SENDER} = user1@example.com</msg>
-<status status="PASS" endtime="20250713 23:31:17.004" starttime="20250713 23:31:17.004"></status>
+<msg timestamp="20250714 14:09:50.478" level="INFO">${SENDER} = user1@example.com</msg>
+<status status="PASS" endtime="20250714 14:09:50.478" starttime="20250714 14:09:50.478"></status>
 </kw>
 <kw name="Get Environment Variable" library="OperatingSystem">
 <doc>Returns the value of an environment variable with the given name.</doc>
@@ -91,82 +91,82 @@
 <assign>
 <var>${RECIPIENT}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.004" level="INFO">${RECIPIENT} = dms@example.com</msg>
-<status status="PASS" endtime="20250713 23:31:17.004" starttime="20250713 23:31:17.004"></status>
+<msg timestamp="20250714 14:09:50.478" level="INFO">${RECIPIENT} = dms@example.com</msg>
+<status status="PASS" endtime="20250714 14:09:50.478" starttime="20250714 14:09:50.478"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Loaded host: ${HOST}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.005" level="INFO">Loaded host: 192.168.229.132</msg>
-<status status="PASS" endtime="20250713 23:31:17.005" starttime="20250713 23:31:17.004"></status>
+<msg timestamp="20250714 14:09:50.479" level="INFO">Loaded host: 192.168.229.132</msg>
+<status status="PASS" endtime="20250714 14:09:50.479" starttime="20250714 14:09:50.478"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Port: ${PORT_INT}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.005" level="INFO">Port: 25</msg>
-<status status="PASS" endtime="20250713 23:31:17.005" starttime="20250713 23:31:17.005"></status>
+<msg timestamp="20250714 14:09:50.479" level="INFO">Port: 25</msg>
+<status status="PASS" endtime="20250714 14:09:50.479" starttime="20250714 14:09:50.479"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${HOST}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.005" level="INFO">${HOST} = 192.168.229.132</msg>
-<status status="PASS" endtime="20250713 23:31:17.005" starttime="20250713 23:31:17.005"></status>
+<msg timestamp="20250714 14:09:50.479" level="INFO">${HOST} = 192.168.229.132</msg>
+<status status="PASS" endtime="20250714 14:09:50.479" starttime="20250714 14:09:50.479"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${PORT_INT}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.006" level="INFO">${PORT_INT} = 25</msg>
-<status status="PASS" endtime="20250713 23:31:17.006" starttime="20250713 23:31:17.005"></status>
+<msg timestamp="20250714 14:09:50.479" level="INFO">${PORT_INT} = 25</msg>
+<status status="PASS" endtime="20250714 14:09:50.480" starttime="20250714 14:09:50.479"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${TCP_TIMEOUT}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.006" level="INFO">${TCP_TIMEOUT} = 5</msg>
-<status status="PASS" endtime="20250713 23:31:17.006" starttime="20250713 23:31:17.006"></status>
+<msg timestamp="20250714 14:09:50.480" level="INFO">${TCP_TIMEOUT} = 5</msg>
+<status status="PASS" endtime="20250714 14:09:50.480" starttime="20250714 14:09:50.480"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${USER}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.006" level="INFO">${USER} = dms</msg>
-<status status="PASS" endtime="20250713 23:31:17.006" starttime="20250713 23:31:17.006"></status>
+<msg timestamp="20250714 14:09:50.480" level="INFO">${USER} = dms</msg>
+<status status="PASS" endtime="20250714 14:09:50.480" starttime="20250714 14:09:50.480"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${PASS}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.006" level="INFO">${PASS} = root</msg>
-<status status="PASS" endtime="20250713 23:31:17.006" starttime="20250713 23:31:17.006"></status>
+<msg timestamp="20250714 14:09:50.480" level="INFO">${PASS} = root</msg>
+<status status="PASS" endtime="20250714 14:09:50.480" starttime="20250714 14:09:50.480"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${SENDER}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.007" level="INFO">${SENDER} = user1@example.com</msg>
-<status status="PASS" endtime="20250713 23:31:17.007" starttime="20250713 23:31:17.007"></status>
+<msg timestamp="20250714 14:09:50.481" level="INFO">${SENDER} = user1@example.com</msg>
+<status status="PASS" endtime="20250714 14:09:50.481" starttime="20250714 14:09:50.481"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${RECIPIENT}</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.007" level="INFO">${RECIPIENT} = dms@example.com</msg>
-<status status="PASS" endtime="20250713 23:31:17.007" starttime="20250713 23:31:17.007"></status>
+<msg timestamp="20250714 14:09:50.481" level="INFO">${RECIPIENT} = dms@example.com</msg>
+<status status="PASS" endtime="20250714 14:09:50.481" starttime="20250714 14:09:50.481"></status>
 </kw>
-<status status="PASS" endtime="20250713 23:31:17.007" starttime="20250713 23:31:16.999"></status>
+<status status="PASS" endtime="20250714 14:09:50.481" starttime="20250714 14:09:50.474"></status>
 </kw>
 <kw name="Connect Smtp Server" library="common">
 <arguments>
@@ -184,11 +184,11 @@
 <assign>
 <var>${SMTP_SRV}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.881" level="INFO">${SMTP_SRV} = &lt;smtplib.SMTP instance at 0x00000000049DA108&gt;</msg>
-<status status="PASS" endtime="20250713 23:31:17.881" starttime="20250713 23:31:17.008"></status>
+<msg timestamp="20250714 14:09:51.415" level="INFO">${SMTP_SRV} = &lt;smtplib.SMTP instance at 0x000000000493A108&gt;</msg>
+<status status="PASS" endtime="20250714 14:09:51.415" starttime="20250714 14:09:50.482"></status>
 </kw>
-<msg timestamp="20250713 23:31:17.881" level="INFO">${SMTP_SVR} = &lt;smtplib.SMTP instance at 0x00000000049DA108&gt;</msg>
-<status status="PASS" endtime="20250713 23:31:17.881" starttime="20250713 23:31:17.007"></status>
+<msg timestamp="20250714 14:09:51.415" level="INFO">${SMTP_SVR} = &lt;smtplib.SMTP instance at 0x000000000493A108&gt;</msg>
+<status status="PASS" endtime="20250714 14:09:51.415" starttime="20250714 14:09:50.482"></status>
 </kw>
 <kw name="Send Quit Command" library="common">
 <arguments>
@@ -204,11 +204,11 @@
 <assign>
 <var>@{RESPONSE_MSG}</var>
 </assign>
-<msg timestamp="20250713 23:31:17.883" level="INFO">@{RESPONSE_MSG} = [ 221 | 2.0.0 Bye ]</msg>
-<status status="PASS" endtime="20250713 23:31:17.883" starttime="20250713 23:31:17.882"></status>
+<msg timestamp="20250714 14:09:51.417" level="INFO">@{RESPONSE_MSG} = [ 221 | 2.0.0 Bye ]</msg>
+<status status="PASS" endtime="20250714 14:09:51.417" starttime="20250714 14:09:51.416"></status>
 </kw>
-<msg timestamp="20250713 23:31:17.883" level="INFO">@{RESULT} = [ 221 | 2.0.0 Bye ]</msg>
-<status status="PASS" endtime="20250713 23:31:17.883" starttime="20250713 23:31:17.881"></status>
+<msg timestamp="20250714 14:09:51.417" level="INFO">@{RESULT} = [ 221 | 2.0.0 Bye ]</msg>
+<status status="PASS" endtime="20250714 14:09:51.417" starttime="20250714 14:09:51.415"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -216,14 +216,14 @@
 <arg>${RESULT}[1]</arg>
 <arg>2.0.0 Bye</arg>
 </arguments>
-<msg timestamp="20250713 23:31:17.883" level="INFO">Argument types are:
+<msg timestamp="20250714 14:09:51.419" level="INFO">Argument types are:
 &lt;type 'str'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20250713 23:31:17.883" starttime="20250713 23:31:17.883"></status>
+<status status="PASS" endtime="20250714 14:09:51.419" starttime="20250714 14:09:51.419"></status>
 </kw>
-<status status="PASS" endtime="20250713 23:31:17.885" critical="yes" starttime="20250713 23:31:16.999"></status>
+<status status="PASS" endtime="20250714 14:09:51.420" critical="yes" starttime="20250714 14:09:50.473"></status>
 </test>
-<status status="PASS" endtime="20250713 23:31:17.886" starttime="20250713 23:31:16.924"></status>
+<status status="PASS" endtime="20250714 14:09:51.421" starttime="20250714 14:09:50.397"></status>
 </suite>
 <statistics>
 <total>

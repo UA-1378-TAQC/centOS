@@ -5,13 +5,12 @@ Resource    src/resources/resource.robot
 Test Setup      Open Connection To SMTP
 Test Teardown   Close Connection
 
-
 *** Variables ***
 ${SUBJECT}    Test subject
 ${BODY}       Test body
 
 *** Test Cases ***
-Test Successful Email Delivery TC05
+Test Verify Successful Email Delivery & Mailbox Content Validation TC05
     Load Environment Variables
 
      ${output}=    Send Mail

@@ -81,6 +81,8 @@ The scripts within this repository leverage a range of technologies to achieve t
 Follow this guide to install and configure Postfix and Dovecot on CentOS 9:  
 🔗 [Postfix + Dovecot Setup Guide](https://reintech.io/blog/setup-mail-server-postfix-dovecot-centos9)
 
+⚠️⚠️⚠️Dont change home_mailbox, leave it default.
+
 ---
 
 ### 🐍 2. Install Python 2.7.18

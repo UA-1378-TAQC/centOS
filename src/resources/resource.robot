@@ -36,17 +36,14 @@ Check Recipient Mailbox
     [Arguments]    ${recipient}
     ${username}=    Evaluate    "${recipient}".split("@")[0]
     ${result}=    Run Keyword And Return Status
-    ...    SSHLibrary.Execute Command    test -s /var/spool/mail/${username}
+    ...    SSHLibrary.Execute Command    test -s ${EMAIL_DIR}/${username}
     [Return]    ${result}
 
 Verify Email Content
     [Arguments]    ${recipient}    ${expected_subject}    ${expected_body}
+
     ${username}=    Evaluate    "${recipient}".split("@")[0]
-    
-    ${mail_files}=    SSHLibrary.Execute Command    ls -t ${EMAIL_DIR}
-    ${mail_filename}=    Evaluate    """${mail_files}.splitlines()[0]"""
-    ${mail_content}=    SSHLibrary.Execute Command    cat ${EMAIL_DIR}/${mail_filename}
-    
+    ${mail_content}=    SSHLibrary.Execute Command    cat ${EMAIL_DIR}/${username}
     ${subject_found}=    Run Keyword And Return Status
     ...    Should Contain    ${mail_content}    Subject: ${expected_subject}
     ${body_found}=    Run Keyword And Return Status

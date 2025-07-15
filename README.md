@@ -85,7 +85,12 @@ Follow this guide to install and configure Postfix and Dovecot on CentOS 9:
 
 ---
 
-### 🐍 2. Install Python 2.7.18
+### ⚙️ 2. CenotOS Setup
+After successful installation Postfix and Dovecot, go to the test_configuration folder and follow the instructions provided to successfully run the corresponding tests. 
+
+---
+
+### 🐍 3. Install Python 2.7.18
 
 Download and install Python 2.7.18:  
 🔗 [Python 2.7.18 Download](https://www.python.org/downloads/release/python-2718/)
@@ -94,7 +99,7 @@ Add it to your system PATH.
 
 ---
 
-### 📥 3. Install OpenSSL (Windows Only)
+### 📥 4. Install OpenSSL (Windows Only)
 
 Download and install the latest full version of OpenSSL for Windows:  
 🔗 [Win32/Win64 OpenSSL Installer](https://slproweb.com/products/Win32OpenSSL.html)
@@ -114,7 +119,7 @@ OpenSSL 3.5.1 1 Jul 2025 (Library: OpenSSL 3.5.1 1 Jul 2025)
 
 ---
 
-### 🧪 4. Install `virtualenv`
+### 🧪 5. Install `virtualenv`
 
 Install `virtualenv` (version 16.7.12):
 ```bash
@@ -123,7 +128,7 @@ pip install virtualenv==16.7.12
 
 ---
 
-### 📁 5. Clone the Repository
+### 📁 6. Clone the Repository
 
 Clone the repo:
 ```bash
@@ -142,7 +147,7 @@ git checkout smtp_testing
 
 ---
 
-### 🌱 6. Create a Virtual Environment
+### 🌱 7. Create a Virtual Environment
 
 On Windows:
 ```bash
@@ -158,7 +163,7 @@ source .venv/bin/activate
 
 ---
 
-### 📦 7. Install Dependencies
+### 📦 8. Install Dependencies
 
 Install Python packages:
 ```bash
@@ -176,7 +181,7 @@ python -m pip install --no-index --no-deps --find-links=. win_inet_pton-1.1.0-py
 
 ---
 
-### ⚙️ 8. Configure `.env`
+### ⚙️ 9. Configure `.env`
 
 Create a `.env` file in the project root folder:
 

@@ -14,7 +14,7 @@ Check HELO Command Response
     ${result}=    Check Helo Response    ${HOST}    ${PORT_INT}
     [Return]    ${result}
 
-Verify SMTP Greeting
+Verify SMTP Greeting Response
     [Arguments]    ${HOST}    ${PORT_INT}
-    ${result}=    tcp_library.Verify Smtp Greeting    ${HOST}    ${PORT_INT}
+    ${result}=    Verify Smtp Greeting    ${HOST}    ${PORT_INT}
     [Return]    ${result}

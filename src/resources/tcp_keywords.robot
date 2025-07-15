@@ -13,3 +13,8 @@ Check HELO Command Response
     [Arguments]    ${HOST}    ${PORT_INT}
     ${result}=    Check Helo Response    ${HOST}    ${PORT_INT}
     [Return]    ${result}
+
+Verify SMTP Greeting Response
+    [Arguments]    ${HOST}    ${PORT_INT}
+    ${result}=    Verify Smtp Greeting    ${HOST}    ${PORT_INT}
+    [Return]    ${result}

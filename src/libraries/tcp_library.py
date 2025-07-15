@@ -47,3 +47,25 @@ def check_helo_response(server_ip, server_port):
     except Exception as e:
         logger.error("Error during HELO check: %s" % str(e))
         return "ERROR: %s" % str(e)
+
+
+def verify_smtp_greeting(host, port, timeout=5):
+    logger = setup_logger(test_name="VerifySmtpGreeting")
+    try:
+        logger.info("Connecting to %s:%s" % (host, port))
+        set_socket = socket.create_connection((host, int(port)), timeout=timeout)
+
+        response = set_socket.recv(1024).decode('utf-8').strip()
+        logger.info("Server greeting: %s" % response)
+
+        set_socket.close()
+
+        if response.startswith("220"):
+            return "GREETING_OK"
+        else:
+            return "GREETING_FAILED: %s" % response
+
+    except Exception as e:
+        logger.error("Error during SMTP greeting check: %s" % str(e))
+        return "ERROR: %s" % str(e)
+

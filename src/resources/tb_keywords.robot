@@ -54,5 +54,3 @@ Generate Line Of Length
     Should Be Equal As Integers    ${actual_length}    ${length}
 
     [Return]    ${repeated_chars}
-
-

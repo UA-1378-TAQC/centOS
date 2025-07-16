@@ -10,7 +10,7 @@ Test Teardown   Close Connection
 ${SUBJECT}    tc09
 ${BODY}    Sssspppppaaaaaammmm
 
-*** Test Cases*** 
+*** Test Cases *** 
 TC09 Email From Blacklisted Sender
     
     Load Environment Variables

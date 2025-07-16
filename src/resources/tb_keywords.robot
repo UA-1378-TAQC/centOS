@@ -44,4 +44,15 @@ Provide Incorrect AUTH LOGIN
     ${auth_result}=    Execute Command    ${inv_data_cmd}
     [Return]    ${auth_result}
 
+Generate Line Of Length
+    [Arguments]    ${length}
+
+    ${base_char}=    Set Variable    A
+    ${repeated_chars}=    Evaluate    "${base_char}" * ${length}
+
+    ${actual_length}=    Get Length    ${repeated_chars}
+    Should Be Equal As Integers    ${actual_length}    ${length}
+
+    [Return]    ${repeated_chars}
+
 

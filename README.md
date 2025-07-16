@@ -213,7 +213,7 @@ SSH_PASSWORD="root"
 
 DOMAIN='@example.com'
 SMTP_PORT=25
-EMAIL_DIR='/home/dms/Maildir/smtp_test'
+EMAIL_DIR='/var/spool/mail'
 
 LOCAL_SENDER='user1@example.com'
 REMOTE_RECIPIENT='user2@example.com'

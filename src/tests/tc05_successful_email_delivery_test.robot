@@ -10,7 +10,7 @@ ${SUBJECT}    Test subject
 ${BODY}       Test body
 
 *** Test Cases ***
-Test Verify Successful Email Delivery & Mailbox Content Validation TC05
+TC05: Verify Successful Email Delivery & Mailbox Content Validation
     Load Environment Variables
 
      ${output}=    Send Mail

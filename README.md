@@ -19,22 +19,23 @@ This project is dedicated to housing a collection of practical scripts designed 
 To maintain a clear and organized structure, the repository follows a specific convention:
 ```
 📁 CENTOS
-├── 📁 .venv/             # Local virtual environment (not tracked by Git)
-├── 📁 logs/              # Output logs (auto-generated, ignored by Git)
-├── 📁 legacy/            # Deprecated or archived code/data
-├── 📁 resources/         # Static files, environment configs, etc.
-├── 📁 src/               # Source code
-│   ├── 📁 config/        # Configuration files (e.g. logger setup)
-│   ├── 📁 libraries/     # Custom Python libraries (e.g. env loader, SMTP client)
-│   ├── 📁 resources/     # Robot Framework resource files
-│   └── 📁 tests/         # Robot Framework test cases
-├── .env                 # Environment variables file
+├── 📁 .venv/                 # Local virtual environment (not tracked by Git)
+├── 📁 legacy/               # Deprecated or archived code/data
+├── 📁 logs/                 # Output logs (auto-generated, ignored by Git)
+├── 📁 resources/            # Static files, environment configs, etc.
+├── 📁 tests_configuration/  # Guides on how to set up CentOS up to testing.
+├── 📁 src/                  # Source code
+│   ├── 📁 config/           # Configuration files (e.g. logger setup)
+│   ├── 📁 libraries/        # Custom Python libraries (e.g. env loader, SMTP client)
+│   ├── 📁 resources/        # Robot Framework resource files
+│   └── 📁 tests/            # Robot Framework test cases
+├── .env                    # Environment variables file
 ├── .gitignore
 ├── README.md
-├── requirements.txt     # Python dependencies
-├── log.html             # Robot Framework log (auto-generated)
-├── output.xml           # Robot Framework output (auto-generated)
-└── report.html          # Robot Framework report (auto-generated)
+├── requirements.txt        # Python dependencies
+├── log.html                # Robot Framework log (auto-generated)
+├── output.xml              # Robot Framework output (auto-generated)
+└── report.html             # Robot Framework report (auto-generated)
 ```
 
 

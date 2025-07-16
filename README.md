@@ -19,22 +19,23 @@ This project is dedicated to housing a collection of practical scripts designed 
 To maintain a clear and organized structure, the repository follows a specific convention:
 ```
 📁 CENTOS
-├── 📁 .venv/             # Local virtual environment (not tracked by Git)
-├── 📁 logs/              # Output logs (auto-generated, ignored by Git)
-├── 📁 legacy/            # Deprecated or archived code/data
-├── 📁 resources/         # Static files, environment configs, etc.
-├── 📁 src/               # Source code
-│   ├── 📁 config/        # Configuration files (e.g. logger setup)
-│   ├── 📁 libraries/     # Custom Python libraries (e.g. env loader, SMTP client)
-│   ├── 📁 resources/     # Robot Framework resource files
-│   └── 📁 tests/         # Robot Framework test cases
-├── .env                 # Environment variables file
+├── 📁 .venv/                 # Local virtual environment (not tracked by Git)
+├── 📁 legacy/               # Deprecated or archived code/data
+├── 📁 logs/                 # Output logs (auto-generated, ignored by Git)
+├── 📁 resources/            # Static files, environment configs, etc.
+├── 📁 tests_configuration/  # Guides on how to set up CentOS up to testing.
+├── 📁 src/                  # Source code
+│   ├── 📁 config/           # Configuration files (e.g. logger setup)
+│   ├── 📁 libraries/        # Custom Python libraries (e.g. env loader, SMTP client)
+│   ├── 📁 resources/        # Robot Framework resource files
+│   └── 📁 tests/            # Robot Framework test cases
+├── .env                    # Environment variables file
 ├── .gitignore
 ├── README.md
-├── requirements.txt     # Python dependencies
-├── log.html             # Robot Framework log (auto-generated)
-├── output.xml           # Robot Framework output (auto-generated)
-└── report.html          # Robot Framework report (auto-generated)
+├── requirements.txt        # Python dependencies
+├── log.html                # Robot Framework log (auto-generated)
+├── output.xml              # Robot Framework output (auto-generated)
+└── report.html             # Robot Framework report (auto-generated)
 ```
 
 
@@ -85,7 +86,12 @@ Follow this guide to install and configure Postfix and Dovecot on CentOS 9:
 
 ---
 
-### 🐍 2. Install Python 2.7.18
+### ⚙️ 2. CenotOS Setup
+After successful installation Postfix and Dovecot, go to the test_configuration folder and follow the instructions provided to successfully run the corresponding tests. 
+
+---
+
+### 🐍 3. Install Python 2.7.18
 
 Download and install Python 2.7.18:  
 🔗 [Python 2.7.18 Download](https://www.python.org/downloads/release/python-2718/)
@@ -94,7 +100,7 @@ Add it to your system PATH.
 
 ---
 
-### 📥 3. Install OpenSSL (Windows Only)
+### 📥 4. Install OpenSSL (Windows Only)
 
 Download and install the latest full version of OpenSSL for Windows:  
 🔗 [Win32/Win64 OpenSSL Installer](https://slproweb.com/products/Win32OpenSSL.html)
@@ -114,7 +120,7 @@ OpenSSL 3.5.1 1 Jul 2025 (Library: OpenSSL 3.5.1 1 Jul 2025)
 
 ---
 
-### 🧪 4. Install `virtualenv`
+### 🧪 5. Install `virtualenv`
 
 Install `virtualenv` (version 16.7.12):
 ```bash
@@ -123,7 +129,7 @@ pip install virtualenv==16.7.12
 
 ---
 
-### 📁 5. Clone the Repository
+### 📁 6. Clone the Repository
 
 Clone the repo:
 ```bash
@@ -142,7 +148,7 @@ git checkout smtp_testing
 
 ---
 
-### 🌱 6. Create a Virtual Environment
+### 🌱 7. Create a Virtual Environment
 
 On Windows:
 ```bash
@@ -158,7 +164,7 @@ source .venv/bin/activate
 
 ---
 
-### 📦 7. Install Dependencies
+### 📦 8. Install Dependencies
 
 Install Python packages:
 ```bash
@@ -176,7 +182,7 @@ python -m pip install --no-index --no-deps --find-links=. win_inet_pton-1.1.0-py
 
 ---
 
-### ⚙️ 8. Configure `.env`
+### ⚙️ 9. Configure `.env`
 
 Create a `.env` file in the project root folder:
 
@@ -207,7 +213,7 @@ SSH_PASSWORD="root"
 
 DOMAIN='@example.com'
 SMTP_PORT=25
-EMAIL_DIR='/home/dms/Maildir/smtp_test'
+EMAIL_DIR='/var/spool/mail'
 
 LOCAL_SENDER='user1@example.com'
 REMOTE_RECIPIENT='user2@example.com'

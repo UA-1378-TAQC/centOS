@@ -14,6 +14,7 @@ Load Environment Variables
     ${SENDER}=    Get Environment Variable    LOCAL_SENDER
     ${RECIPIENT}=    Get Environment Variable    REMOTE_RECIPIENT
     ${EMAIL_DIR}=    Get Environment Variable    EMAIL_DIR
+    ${SPAM_SENDER}=    Get Environment Variable    SPAM_SENDER
 
     Log    Loaded host: ${HOST}
     Log    Port: ${PORT_INT}
@@ -26,3 +27,4 @@ Load Environment Variables
     Set Suite Variable    ${SENDER}
     Set Suite Variable    ${RECIPIENT}
     Set Suite Variable    ${EMAIL_DIR}
+    Set Suite Variable    ${SPAM_SENDER}

@@ -3,8 +3,8 @@ Here's the corrected version in English:
 # ⚙️ CentOS Script Repository for UA-1378 TAQC Students
 
 This README provides instructions for setting up a CentOS virtual machine for the `tc12_max_mail_length_test`:
-- Verify successful email delivery with 333 characters in the body
-- Verify mail rejection with 334 characters in the body  
+- Verify successful email delivery with 998 characters in the body
+- Verify mail rejection with 999 characters in the body  
 
 ---
 
@@ -19,7 +19,7 @@ sudo nano /etc/postfix/body_checks
 
 Add the following rule:
 ```cmd
-/^.{334,}/ REJECT Message body too long (max 333 characters allowed)
+/^.{999,}/ REJECT Message body too long (max 998 characters allowed)
 ```
 
 ---

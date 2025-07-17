@@ -48,3 +48,7 @@ Check Maillog
     ${OUTPUT}=    Read Log File    ${HOST}    ${USER}    ${PASS}
     [Return]    ${OUTPUT}
     
+Send Mail With IP
+    [Arguments]    ${SENDER}    ${RECIPIENT}    ${SUBJECT}    ${BODY}    ${SENDER_IP}    ${HOST}    ${PORT_INT}
+    ${output}=    Send Mail With Ip Function    ${SENDER}    ${RECIPIENT}    ${SUBJECT}    ${BODY}    ${SENDER_IP}    ${HOST}    ${PORT_INT}
+    [Return]    ${output}

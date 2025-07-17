@@ -1,6 +1,7 @@
 import os
 import paramiko
 import smtplib
+import socket
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -126,3 +127,23 @@ def read_recent_mail(username, password, host):
         "recent_mail=$(ls --sort=time /home/{}/Maildir/new/ | head -n 1) && cat /home/{}/Maildir/new/$recent_mail".format(
             username, username))
     return stdout.read()
+
+def send_mail_with_ip_function(sender, recipient, subject, body, source_ip, host, port):
+    class SMTPWithSourceIP(smtplib.SMTP):
+        def _get_socket(self, host, port, timeout):
+            return socket.create_connection((host, port), timeout, source_address=(source_ip, 0))
+
+    try:
+        smtp = SMTPWithSourceIP(timeout=10)
+        smtp.connect(host, port)
+        smtp.ehlo()
+
+        message = "Subject: {}\r\nFrom: {}\r\nTo: {}\r\n\r\n{}".format(subject, sender, recipient, body)
+
+        res = smtp.sendmail(sender, recipient, message)
+        smtp.quit()
+
+        return "SUCCESS: {}".format(res)
+
+    except Exception as e:
+        return "ERROR: {}".format(str(e))

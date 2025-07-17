@@ -17,3 +17,8 @@ Verify SMTP Greeting Response
     [Arguments]    ${HOST}    ${PORT_INT}
     ${result}=    Verify Smtp Greeting    ${HOST}    ${PORT_INT}
     [Return]    ${result}
+
+Get Sender Ip
+    [Arguments]    ${HOST}    ${PORT_INT}
+    ${ip}=    Get Sender Ip Function    ${HOST}    ${PORT_INT}
+    [Return]    ${ip}

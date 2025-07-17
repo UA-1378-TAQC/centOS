@@ -1,5 +1,5 @@
-import socket
 import os
+import socket
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -48,7 +48,6 @@ def check_helo_response(server_ip, server_port):
         logger.error("Error during HELO check: %s" % str(e))
         return "ERROR: %s" % str(e)
 
-
 def verify_smtp_greeting(host, port, timeout=5):
     logger = setup_logger(test_name="VerifySmtpGreeting")
     try:
@@ -69,3 +68,12 @@ def verify_smtp_greeting(host, port, timeout=5):
         logger.error("Error during SMTP greeting check: %s" % str(e))
         return "ERROR: %s" % str(e)
 
+def get_sender_ip_function(host,port,timeout = 5):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((host,port))
+
+    res = s.getsockname()[0]
+
+    s.close()
+
+    return res

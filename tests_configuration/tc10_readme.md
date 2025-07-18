@@ -84,6 +84,11 @@ Restart Postfix:
 sudo systemctl restart postfix
 ```
 
+Command to clear logs:
+```cmd
+sudo truncate -s 0 /var/log/maillog
+```
+
 ---
 
 Congratulation!!! 

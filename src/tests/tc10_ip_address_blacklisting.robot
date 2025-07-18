@@ -29,8 +29,8 @@ TC10 Ip Address Blacklisting
 
     ${status}=    Set Variable    ${result[0]}
     ${output}=    Set Variable    ${result[1]}
-    Log To Console    Status: ${status}
-    Log To Console    Output:\n${output}
+    Log To Console    \nStatus: ${status}
+    Log To Console    \nOutput: ${output} \n
 
     Should Contain    ${output}    554
     Should Contain    ${output}    5.7.1
